@@ -3,7 +3,7 @@
 #
 
 import datetime
-import calendar
+import calendar as cal
 now = datetime.datetime.now()
 print(now.strftime("%Y年%m月%d日 %H:%M:%S"))
-print(calendar.month(2024,6))
+print(cal.month(2024,6))
