@@ -7,7 +7,6 @@ import PIL.Image
 import PIL.ImageTk
 
 def dispPhoto(path):
-    #画像を読み込んでモザイクに変換
     newImage = PIL.Image.open(path).convert("L").rotate(90).transpose(PIL.Image.FLIP_LEFT_RIGHT).resize((300,300))
     imageData = PIL.ImageTk.PhotoImage(newImage)
     imageLabel.configure(image = imageData)
