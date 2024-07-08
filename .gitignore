@@ -3,3 +3,4 @@ __pycache___/
 *.pyw
 *.exe
 time_kadai.pyw
+tmp/
