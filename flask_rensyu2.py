@@ -18,14 +18,14 @@ def index():
     return render_template('index.html')
 
 @app.route('/himitsu')
-def index2():
+def himitsu():
     #templates/himitsu.htmlをあらかじめ作成しておく
     return render_template('himitsu.html')
 
 
 if __name__ == '__main__':
     #それぞれのユニークなIPアドレスでアクセスするように設定
-    app.run(port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
 
 #python flask_rensyu2.pyで実行し
 #ブラウザから表示させてみましょう
