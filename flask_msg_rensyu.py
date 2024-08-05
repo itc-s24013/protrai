@@ -30,7 +30,11 @@ def submit():
     #data.txtに追記する
     with open('data.txt', 'a') as file:
         file.write(f"\n{datetime.datetime.now()}\n{content}\n")
-        return f"書き込みました"
+        with open('data.txt', 'r') as file:
+            file.read
+        return '''書き込みました<br>
+                <a href="/msg">戻る</a>
+               '''
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port='5000', debug=True)
