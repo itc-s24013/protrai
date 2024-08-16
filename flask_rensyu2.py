@@ -16,11 +16,15 @@ app = Flask(__name__)
 def index():
     #templates/index.htmlをあらかじめ作成しておく
     return render_template('index.html')
+    return "test"
 
 @app.route('/himitsu')
 def himitsu():
     #templates/himitsu.htmlをあらかじめ作成しておく
-    return render_template('himitsu.html')
+    return """
+<h1>秘密のページ</h1>
+<button onclick="location.href='/'">ホームに戻る</buttom>
+"""
 
 
 if __name__ == '__main__':

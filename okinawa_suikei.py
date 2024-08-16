@@ -20,9 +20,6 @@ a = []
 for element in table.find_all('td', align="right"):
     a.append(element.text)
 
-b = []
-for elements in table.find_all('td', align="center"):
-    b.append(elements.text)
 print(f"総人口：{a[0]}")
 print(f"男：{a[1]}")
 print(f"女：{a[2]}")
